@@ -22,8 +22,12 @@ angular.module('App', ['ionic'])
     controller: 'RestaurantsController',
     templateUrl: 'views/restaurants/restaurants.html'
   })
+  .state('tour', {
+    url: '/tour',
+    templateUrl: 'views/tour/tour.html'
+  })
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/tour');
 })
 
 .run(function($ionicPlatform) {
