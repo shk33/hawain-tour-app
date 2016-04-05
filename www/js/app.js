@@ -1,4 +1,4 @@
-angular.module('App', ['ionic'])
+angular.module('App', ['ionic','ngCordova'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -25,6 +25,11 @@ angular.module('App', ['ionic'])
   .state('tour', {
     url: '/tour',
     templateUrl: 'views/tour/tour.html'
+  })
+  .state('photos', {
+    url: '/photos',
+    controller: 'PhotosController',
+    templateUrl: 'views/photos/photos.html'
   })
 
   $urlRouterProvider.otherwise('/tour');
